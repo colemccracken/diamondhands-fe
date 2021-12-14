@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import ConnectWallet from "../components/ConnectWallet";
+import MintButton from "../components/Mint";
 import TotalSupply from "../components/TotalSupply";
 import Header from "../components/Header";
 import React from "react";
@@ -55,8 +55,7 @@ export default function Home() {
                 Please only mint if you understand how this works.
               </p>
               <div className="mt-4">
-                <TotalSupply></TotalSupply>
-                <ConnectWallet />
+                <MintButton />
               </div>
             </div>
             <div className="mt-2">
