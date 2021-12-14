@@ -6,10 +6,11 @@ const nftAbi = abi;
 
 const getProvider = (window) => {
   if (window?.ethereum) {
-    return new ethers.providers.Web3Provider(window.ethereum);
+    return new ethers.providers.Web3Provider(window.ethereum, "mainnet");
   } else {
     return new ethers.providers.JsonRpcProvider(
-      "https://eth-mainnet.alchemyapi.io/v2/aeqfKZW3sz-8pu5JCtA1Sz_0HOcu7hD9"
+      "https://eth-mainnet.alchemyapi.io/v2/aeqfKZW3sz-8pu5JCtA1Sz_0HOcu7hD9",
+      "mainnet"
     );
   }
 };

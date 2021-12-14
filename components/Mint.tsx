@@ -7,14 +7,18 @@ export default function MintButton(props) {
   useEffect(() => {
     const fetchSupply = async () => {
       const contract = await getContract(getProvider(window));
-      const total = await contract.totalSupply();
-      setTotalMinted(total.toNumber());
+      try {
+        const total = await contract.totalSupply();
+        setTotalMinted(total.toNumber());
+      } catch (e) {
+        window.alert("Wrong network. Please switch to mainnet");
+      }
     };
 
     fetchSupply();
   });
 
-  const onButtonClick = async (window) => {
+  const onMintClick = async (window) => {
     if (!window.ethereum) {
       window.alert("No ethereum wallet detected");
       return;
@@ -32,7 +36,7 @@ export default function MintButton(props) {
       {totalMinted !== 0 && totalMinted < 1000 && (
         <button
           className="mt-6 bg-black hover:bg-gray-600 text-white text-3xl font-bold py-4 px-6 rounded disabled:opacity-50 disabled:cursor-not-allowed select-none w-48"
-          onClick={() => onButtonClick(window)}
+          onClick={() => onMintClick(window)}
         >
           Mint
         </button>
