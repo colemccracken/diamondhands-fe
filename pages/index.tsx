@@ -3,10 +3,32 @@ import Image from "next/image";
 import ConnectWallet from "../components/ConnectWallet";
 import TotalSupply from "../components/TotalSupply";
 import Header from "../components/Header";
+import React from "react";
+import { NextSeo } from "next-seo";
 
 export default function Home() {
   return (
     <div>
+      <NextSeo
+        title="Proof of Diamond Hands"
+        description="An NFT that proves the owner has diamond hands."
+        canonical="https://proofofdiamondhands.com/"
+        openGraph={{
+          url: "https://proofofdiamondhands.com",
+          title: "Proof of Diamond Hands",
+          description: "An NFT that proves the owner has diamond hands.",
+          images: [
+            {
+              url: "https://gateway.pinata.cloud/ipfs/QmQRfaWsF2mJ7hbhLy52JLbqxz4uXPrYEoFYthqn7K64ET",
+              width: 600,
+              height: 600,
+              alt: "Diamond Hands",
+              type: "image/svg",
+            },
+          ],
+          site_name: "Proof of Diamond Hands",
+        }}
+      />
       <Head>
         <title>Diamond Hands</title>
         <link rel="icon" href="/favicon.ico" />
