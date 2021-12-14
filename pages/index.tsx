@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
 import MintButton from "../components/Mint";
-import TotalSupply from "../components/TotalSupply";
 import Header from "../components/Header";
 import React from "react";
 import { NextSeo } from "next-seo";
