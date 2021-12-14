@@ -13,11 +13,11 @@ export default function Seo() {
         description: "An NFT that proves the owner has diamond hands.",
         images: [
           {
-            url: "https://gateway.pinata.cloud/ipfs/QmQRfaWsF2mJ7hbhLy52JLbqxz4uXPrYEoFYthqn7K64ET",
-            width: 600,
-            height: 600,
+            url: "https://gateway.pinata.cloud/ipfs/QmRdJ9DPFFEZJdfXfHoMoTdzgXP3DfQBL8E2uyHfMHfZ7c",
+            width: 1200,
+            height: 630,
             alt: "Diamond Hands",
-            type: "image/svg",
+            type: "image/jpeg",
           },
         ],
         site_name: "Proof of Diamond Hands",
